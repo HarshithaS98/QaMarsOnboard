@@ -27,7 +27,7 @@ public class CreateSkill : CommonDriver
         SelectElement SkilllevelDropdown = new SelectElement(driver.FindElement(By.Name("level")));
         SkilllevelDropdown.SelectByValue(SkillLevel);
 
-        // Choose beginner level from dropdown
+       
        
         // Identify Add button and click
         wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]")));
@@ -35,6 +35,22 @@ public class CreateSkill : CommonDriver
         AddButton.Click();
         Thread.Sleep(1000);
     }
+    //Thread.Sleep(1500);
+    //        //SKILLS
+    //        IWebElement skillsbutton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
+    //skillsbutton.Click();
+    //        Thread.Sleep(1500);
+    //        //click add new button
+    //        IWebElement addnewskill = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/thead/tr/th[3]/div"));
+    //addnewskill.Click();
+    //        Thread.Sleep(1500);
+    //        // click add skills button and enter skills
+    //        IWebElement addskill = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input"));
+    //addskill.SendKeys(skill);
+    //        Thread.Sleep(1500);
+    //        // choose level from dropdown 
+    //        SelectElement chooselevel = new SelectElement(driver.FindElement(By.Name("level")));
+    //chooselevel.SelectByValue(skilllevel);
 
     public void CheckSkillAdded(string skill,string skillLevel)
     {

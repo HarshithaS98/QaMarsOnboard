@@ -20,13 +20,13 @@ namespace MarsUpdated;
     [When(@"User adds a '([^']*)' and  '([^']*)'")]
     public void WhenUserAddsAAnd(string Language, string Level)
     {
-        throw new PendingStepException();
+        ASP.CreateLanguages(Language, Level);
     }
 
     [Then(@"'([^']*)' and '([^']*)'   language created sucessfully")]
     public void ThenAndLanguageCreatedSucessfully(string Language, string Level)
     {
-        throw new PendingStepException();
+        ASP.CheckLangugaeCreated(Language, Level);
     }
 
 }

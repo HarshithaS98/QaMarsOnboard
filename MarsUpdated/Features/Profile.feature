@@ -24,4 +24,4 @@ Scenario Outline: create new Skill
     | Language | Level          |
     | English  | Fluent         |
     | Mandarin | Conversational |
-    | Telugu   | Native         |
+    
