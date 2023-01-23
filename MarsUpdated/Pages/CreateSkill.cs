@@ -6,7 +6,7 @@ public class CreateSkill : CommonDriver
     WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
     public void CreateSkills(string Skills, string SkillLevel)
     {
-
+       
         // Identify skill button and click and using explicit waits to locate elements
         wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]")));
         IWebElement SkillButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));

@@ -29,7 +29,7 @@ namespace MarsUpdated.Pages
 
             // Add certified 'From" toolbox
             IWebElement fromtab = driver.FindElement(By.Name("certificationFrom"));
-            certab.SendKeys(From);
+            fromtab.SendKeys(From);
 
 
             // select certified "Year" dropdown
@@ -70,57 +70,4 @@ namespace MarsUpdated.Pages
 
 
 
-                //fluent assertions. True if skill added
-               // skillAdded.Should().BeTrue();
-                //public void CheckSkillAdded(string skill, string skillLevel)
-                //{
-                //    //boolean value to check if the skill is added for assertion
-                //    bool skillAdded = false;
-                //    //reading all the columns from the table
-                //    ReadOnlyCollection<IWebElement> elements;
-                //    wait.Until(ExpectedConditions.ElementIsVisible(By.TagName("td")));
-                //    elements = driver.FindElements(By.TagName("td"));
-                //    for (int i = 0; i < elements.Count; i++)
-                //    {
-                //        //checking to see if the value of skill is added to any column in the table
-                //        if (elements[i].Text == skill)
-                //        {
-                //            //true if skill present
-                //            skillAdded = true;
-                //            break;
-                //        }
-                //    }
-                //    //fluent assertions. True if skill added
-                //    skillAdded.Should().BeTrue();
-
-
-
-
-
-
-
-
-
-
-
-            }
-        //public void CreateCertification()
-        ////Identify certification button
-        //IWebElement cerbutton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
-        //cerbutton.Click();
-        //    // identify add new button
-        //    IWebElement addCer = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
-        //addCer.Click();
-
-        //    //identify certificate or award textbox and add Istqb Certification
-        //    IWebElement certoolbox = driver.FindElement(By.Name("certificationName"));
-        //certoolbox.SendKeys(From);
-        //    // identify year dropbox and choose 2022
-        //    IWebElement yearCer = driver.FindElement(By.Name("certificationYear"));
-        ////choose2022
-        //yearCer.Click();
-        //    IWebElement yearofcer = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[2]/select/option[3]"));
-        //yearofcer.Click();
-        //    //identify add and save details
-        //    IWebElement addcertificate = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
-       
+           

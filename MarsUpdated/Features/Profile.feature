@@ -30,8 +30,8 @@ Scenario Outline: create new Skill
     When Added '<Certificate>' and '<From>' and '<Year>'  to the Certifications
     Then   '<certificate>' and '<From>' and '<Year>'  created successfully
     Examples: 
-    | Certificate | From | Year    |
-    | ISTQB       | SGTQB | 2022    |
+    | Certificate | From            | Year    |
+    | ISTQB       | SGTQB           | 2022    |
     | API         | INDUSTRYCONNECT | 2023|
 
     
