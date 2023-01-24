@@ -37,6 +37,11 @@ namespace MarsUpdated.Pages
             IWebElement addbutton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
             addbutton.Click();
 
+            // Identify language button and click and using explicit waits to locate elements
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]")));
+            IWebElement languagebutton1 = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
+            languagebutton1.Click();
+
         }
         //// Profile page
         ////LANGUAGES
@@ -69,7 +74,7 @@ namespace MarsUpdated.Pages
 
         public void CheckLangugaeAdded(string Language, string Level)
         {
-            Thread.Sleep(1000);
+         
             //boolean value to check if the skill is added for assertion
             bool LanguageAdded = false;
             //reading all the columns from the table

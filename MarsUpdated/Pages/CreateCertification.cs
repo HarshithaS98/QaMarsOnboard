@@ -40,12 +40,18 @@ namespace MarsUpdated.Pages
             wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]")));
             IWebElement Addcer = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
             Addcer.Click();
+
+            // Identify Certification button and click and using explicit waits to locate elements
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]")));
+            IWebElement cerbutton1 = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+            cerbutton1.Click();
+
         }
 
-         public void CheckCertificationAdded(string Certificate, string From, string Year)
+        public void CheckCertificationAdded(string Certificate, string From, string Year)
             
          {
-               Thread.Sleep(1000);
+              
                 //boolean value to check if the skill is added for assertion
                 bool CertificationAdded = false;
                 //reading all the columns from the table
