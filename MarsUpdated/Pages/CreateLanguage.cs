@@ -67,13 +67,14 @@ namespace MarsUpdated.Pages
         //    IWebElement addbutton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
         //addbutton.Click();
 
-        public void CheckLangugaeCreated(string Language, string Level)
+        public void CheckLangugaeAdded(string Language, string Level)
         {
+            Thread.Sleep(1000);
             //boolean value to check if the skill is added for assertion
             bool LanguageAdded = false;
             //reading all the columns from the table
             ReadOnlyCollection<IWebElement> elements;
-            wait.Until(ExpectedConditions.ElementIsVisible(By.TagName("td")));
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.TagName("td")));
             elements = driver.FindElements(By.TagName("td"));
             for (int i = 0; i < elements.Count; i++)
             {

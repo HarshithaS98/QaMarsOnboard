@@ -26,7 +26,7 @@ namespace MarsUpdated;
     [Then(@"'([^']*)' and '([^']*)'   language created sucessfully")]
     public void ThenAndLanguageCreatedSucessfully(string Language, string Level)
     {
-        ASP.CheckLangugaeCreated(Language, Level);
+        ASP.CheckLangugaeAdded(Language, Level);
     }
 
 }

@@ -34,28 +34,53 @@ Scenario Outline: create new Skill
     | ISTQB       | SGTQB           | 2022    |
     | API         | INDUSTRYCONNECT | 2023|
 
-    
+ 
+ 
+ 
+    #Scenario Outline: User edited existing language with valid details
+    #Given edited '<language>' and '<level>' to the languages
+    #Then the '<language>' and '<level>'  edited successfully
+
+    #Examples: 
+    #| language | level          |
+    #| Hindi    | Conversational |
+
+    #Scenario: User able to delete edited languages with valid details
+    #Given Deleted '<language>' and '<level>' in the language
+    #Then the '<language>' and '<level>'  deleted successfully
+    #Scenario Outline: User edited existing skill with valid details
+    #Given edited '<skill>' and '<skilllevel>' to the skills
+    #Then  '<skill>' and '<skilllevel>'  edited successfully
+
+    #Examples: 
+    #| Language | Level          |
+    #| Selenium using C#   |Intermediate|
+
+    #Scenario: User able to delete edited skill with valid details
+    #Given Deleted '<skill>' and '<skilllevel>' in the skills
+    #Then  '<skill>' and '<skilllevel>'  deleted successfully
+
    #Scenario Outline: User edited existing certificate details with valid details
    #Given edited '<certificate>' and '<Year>' and '<From>'  to the Certifications
    #Then the '<certificate>' and '<Year>' and '<From>'  to the Certifications edited successfully
 
- #Examples: 
- #| certificate  | From             | Year | 
-  #Scenario: User able to delete edited certificate details  with valid details
-  #Given Deleted '<certificate>', '<Year>' , '<From>'  to the Certifications
-  #Then the '<certificate>' , '<Year>' , '<From>'  to the Certifications  deleted successfully
+    #Examples: 
+     #| certificate  | From             | Year | 
+     #Scenario: User able to delete edited certificate details  with valid details
+    #Given Deleted '<certificate>', '<Year>' , '<From>'  to the Certifications
+    #Then the '<certificate>' , '<Year>' , '<From>'  to the Certifications  deleted successfully
 
 
- #All The Testcases for profile page
-#Scenario:Verify validation error for certification
-#When Lefted '<certificate>' and <Year> and <From>  to the Certificationsnot choosen or when duplicate data exists
-#Then error message should be displayed
+     #All The Testcases for profile page
+        #Scenario:Verify validation error for certification
+    #When Lefted '<certificate>' and <Year> and <From>  to the Certificationsnot choosen or when duplicate data exists
+    #Then error message should be displayed
 
-#Scenario Outline: User writes  description using description tab
-#When When Added <description>  to the description
-#Then the <description>   created successfully
+    #Scenario Outline: User writes  description using description tab
+    #When When Added <description>  to the description
+    #Then the <description>   created successfully
 
- #Examples: 
+     #Examples: 
  #| Description                                                            |  
  #| Iam Harshitha, I would like to say that Iam a Qa Intern at MvP studios |
 

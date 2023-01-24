@@ -33,7 +33,7 @@ public class CreateSkill : CommonDriver
         wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]")));
         IWebElement AddButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
         AddButton.Click();
-        Thread.Sleep(1000);
+      
     }
     //Thread.Sleep(1500);
     //        //SKILLS
@@ -54,11 +54,13 @@ public class CreateSkill : CommonDriver
 
     public void CheckSkillAdded(string skill,string skillLevel)
     {
+        Thread.Sleep(1000);
+
         //boolean value to check if the skill is added for assertion
         bool skillAdded = false;
         //reading all the columns from the table
         ReadOnlyCollection<IWebElement> elements;
-        wait.Until(ExpectedConditions.ElementIsVisible(By.TagName("td")));
+        wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.TagName("td")));
         elements = driver.FindElements(By.TagName("td"));
         for(int i = 0; i < elements.Count; i++)
         {

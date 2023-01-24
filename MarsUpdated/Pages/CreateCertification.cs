@@ -45,16 +45,17 @@ namespace MarsUpdated.Pages
          public void CheckCertificationAdded(string Certificate, string From, string Year)
             
          {
+               Thread.Sleep(1000);
                 //boolean value to check if the skill is added for assertion
                 bool CertificationAdded = false;
                 //reading all the columns from the table
                 ReadOnlyCollection<IWebElement> elements;
-                wait.Until(ExpectedConditions.ElementIsVisible(By.TagName("td")));
-                elements = driver.FindElements(By.TagName("td"));
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.TagName("td")));
+            elements = driver.FindElements(By.TagName("td"));
                 for (int i = 0; i < elements.Count; i++)
                 {
                     //checking to see if the value of skill is added to any column in the table
-                    if (elements[i].Text == Certificate)
+                    if (elements[i].Text == Year)
                     {
                     //true if skill present
                      CertificationAdded = true;
@@ -62,9 +63,10 @@ namespace MarsUpdated.Pages
                     }
                 }
 
+            //fluent assertions. True if certification added
+            CertificationAdded.Should().BeTrue();
 
-
-         }
+        }
     } 
 }
 
