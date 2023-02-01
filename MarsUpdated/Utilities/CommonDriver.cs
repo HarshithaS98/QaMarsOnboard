@@ -10,7 +10,7 @@ namespace MarsUpdated;
 [Binding]
 public class CommonDriver
 {
-    public static IWebDriver? driver;
+    public static IWebDriver driver;
 
 
     //teardown method is called automatically by specflow hooks after every scenario

@@ -9,26 +9,29 @@ namespace MarsUpdated.Pages
     public class CreateCertification : CommonDriver
 
     {
-        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+        public IWebElement cerbutton => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+        public IWebElement addCer => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
+        public IWebElement certab => driver.FindElement(By.Name("certificationName"));
+        public IWebElement fromtab => driver.FindElement(By.Name("certificationFrom"));
+        public IWebElement Addcer => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
+        public IWebElement cerbutton1 => driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+
         public void CreateCertifications(string Certificate, string From, string Year)
         {
 
             // Identify Certification button and click and using explicit waits to locate elements
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]")));
-            IWebElement cerbutton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
             cerbutton.Click();
 
-            //    // identify add new button
+            // identify add new button
             wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div")));
-            IWebElement addCer = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
             addCer.Click();
 
             // Add certifications to certification tab
-            IWebElement certab = driver.FindElement(By.Name("certificationName"));
             certab.SendKeys(Certificate);
 
             // Add certified 'From" toolbox
-            IWebElement fromtab = driver.FindElement(By.Name("certificationFrom"));
             fromtab.SendKeys(From);
 
 
@@ -38,12 +41,10 @@ namespace MarsUpdated.Pages
 
             // Identify Add button and click
             wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]")));
-            IWebElement Addcer = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]"));
             Addcer.Click();
 
             // Identify Certification button and click and using explicit waits to locate elements
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]")));
-            IWebElement cerbutton1 = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
             cerbutton1.Click();
 
         }
